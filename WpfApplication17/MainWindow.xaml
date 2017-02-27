@@ -12,7 +12,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <local:TopMenu x:Name="TopMenu" Grid.Row="0" ></local:TopMenu>
-        <Frame x:Name="FrameNavigate" NavigationUIVisibility="Hidden"  Grid.Row="1">
+        <Frame x:Name="FrameNavigate" NavigationUIVisibility="Hidden" Grid.Row="1">
 
         </Frame>
     </Grid>

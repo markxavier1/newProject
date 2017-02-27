@@ -5,8 +5,8 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WpfApplication17"
       mc:Ignorable="d" 
-      d:DesignHeight="768" d:DesignWidth="1366"
-      Title="PageRegister" Background="Green">
+      d:DesignHeight="728" d:DesignWidth="1366"
+      Title="PageRegister" Background="#ffffff">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -15,6 +15,11 @@
             <RowDefinition Height="7*"/>
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
-        <local:TopSub x:Name="UCSub" Grid.Row="0"></local:TopSub> 
+        <local:TopSub x:Name="UCSub" Grid.Row="0"></local:TopSub>
+        <DockPanel Background="#cccccc" Grid.Row="1" >
+            <StackPanel Width="200" Margin="20 15" DockPanel.Dock="Left" HorizontalAlignment="Left"> </StackPanel>
+        </DockPanel>
+
+        <DockPanel Background="#3f3f3f" Grid.Row="3"></DockPanel>
     </Grid>
 </Page>

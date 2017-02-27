@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="WpfApplication17.TopMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApplication17"
+             mc:Ignorable="d" 
+             d:DesignHeight="40" d:DesignWidth="1366" Background="#3F3F3F">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="*"/>
+           
+        </Grid.RowDefinitions>
+
+        <DockPanel Grid.Row="0">
+            <DockPanel HorizontalAlignment="Right">
+                <Button DockPanel.Dock="Right" x:Name="btnclose" Width="20" Style="{StaticResource MyButton}" Height="20" Margin="10,0,10,0"  BorderBrush="Transparent" Click="btnclose_Click"  >
+                    <Button.Background>
+                        <ImageBrush ImageSource="images/32x32_close_icon.png"/>
+                    </Button.Background>
+
+                </Button>
+
+                <Button DockPanel.Dock="Right" x:Name="btnMin" Width="20" Style="{StaticResource MyButton}"  Height="20"   BorderBrush="Transparent" Click="btnMin_Click"  >
+                    <Button.Background>
+                        <ImageBrush ImageSource="images/32x32_minimize_icon.png"/>
+                    </Button.Background>
+
+                </Button>
+            </DockPanel>
+        </DockPanel>
+    </Grid>
+</UserControl>

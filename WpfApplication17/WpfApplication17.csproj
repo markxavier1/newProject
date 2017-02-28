@@ -123,6 +123,12 @@
     <Resource Include="images\32x32_close_icon.png" />
     <Resource Include="images\32x32_minimize_icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\appbar.billboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\appbar.control.guide.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

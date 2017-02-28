@@ -8,7 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/32x32_close_icon.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/32x32_minimize_icon.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/appbar.control.guide.png")]
 
 

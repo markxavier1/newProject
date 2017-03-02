@@ -45,7 +45,7 @@
                 </Button>
                 <TextBlock Text="asfkjkl" Foreground="#ffffff" Margin="15 0 0 0" FontSize="24"></TextBlock>
             </StackPanel>
-            <StackPanel Width="200" Margin="20 45 0 20" DockPanel.Dock="Left" HorizontalAlignment="Left" Background="#00879C">
+            <StackPanel Width="200" Margin="20 45 0 20" DockPanel.Dock="Left" HorizontalAlignment="Left" Background="#cc6dff">
                 <Button  x:Name="btndfg" HorizontalAlignment="Left" Width="60" Style="{StaticResource MyButton}" Height="60" Margin="10,0,10,0"  BorderBrush="Transparent"  >
                     <Button.Background>
                         <ImageBrush ImageSource="images/appbar.control.guide.png"/>
@@ -121,24 +121,24 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
+                 
                 </Grid.ColumnDefinitions>
-                <TextBox Name="txtCaseName" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"  Padding="10 15" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="15 20 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
-                <TextBox Name="txtName" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"  Padding="10 15" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Margin="15 20 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
-                <TextBox Name="txtas" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"  Padding="10 15" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" Margin="15 20 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
+                <TextBox Name="txtCaseName" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"  Padding="10 15" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="15 00 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
+                <TextBox Name="txtName" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"  Padding="10 15" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Margin="15 00 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
+                <TextBox Name="txtas" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"  Padding="10 15" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" Margin="15 00 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
 
-                <TextBox Name="txtdsf" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"  Padding="10 15" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="15 10 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
-                <TextBox Name="txtsdf" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"  Padding="10 15" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Margin="15 10 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
-                <TextBox Name="txtwerw" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"  Padding="10 15" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" Margin="15 20 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
-
-
-                <TextBox Name="txtdsdf" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"  Padding="10 15" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="15 10 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
-                <TextBox Name="txtsdfs" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"  Padding="10 15" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" Margin="15 10 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
-                <TextBox Name="txtwer" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"  Padding="10 15" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" Margin="15 20 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
+                <TextBox Name="txtdsf" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"  Padding="10 15" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="15 0 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
+                <TextBox Name="txtsdf" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"  Padding="10 15" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Margin="15 0 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
+                <TextBox Name="txtwerw" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"  Padding="10 15" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" Margin="15 0 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
 
 
-                <TextBox Name="txt54tdf" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26" TextWrapping="Wrap"  Padding="10 15" Grid.Row="3" Grid.Column="0"  VerticalAlignment="Center" Margin="15 10 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
-                <ComboBox Name="cbObjects" Grid.Column="1" Grid.Row="3" Margin="15 20 0 0" Height="60" VerticalAlignment="Center"   >
+                <TextBox Name="txtdsdf" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"  Padding="10 15" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="15 0 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
+                <TextBox Name="txtsdfs" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"  Padding="10 15" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" Margin="15 0 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
+                <TextBox Name="txtwer" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"  Padding="10 15" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" Margin="15 0 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
+
+
+                <TextBox Name="txt54tdf" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26" TextWrapping="Wrap"  Padding="10 15" Grid.Row="3" Grid.Column="0"  VerticalAlignment="Center" Margin="15 0 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
+                <ComboBox Name="cbObjects" Grid.Column="1" Grid.Row="3" Margin="15 0 0 0" Height="60" VerticalAlignment="Center"   >
                     <ComboBox.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
@@ -148,7 +148,7 @@
                         </DataTemplate>
                     </ComboBox.ItemTemplate>
                 </ComboBox>
-                <ComboBox Name="cbObjdf" Grid.Column="2" Grid.Row="3" Margin="15 20 0 0" Height="60" VerticalAlignment="Center"   >
+                <ComboBox Name="cbObjdf" Grid.Column="2" Grid.Row="3" Margin="15 0 0 0" Height="60" VerticalAlignment="Center"   >
                     <ComboBox.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
@@ -160,9 +160,9 @@
                 </ComboBox>
 
 
-                <TextBox Name="txsdf" HorizontalAlignment="Stretch" Text="Enter Name" Grid.RowSpan="2" Height="150" FontSize="26"  Padding="10 15" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" Margin="15 10 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
-                <TextBox Name="ssdfdf" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"  Padding="10 15" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Margin="15 10 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
-                <TextBox Name="ssdfdsff" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"  Padding="10 15" Grid.Row="4" Grid.Column="2" VerticalAlignment="Center" Margin="15 10 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
+                <TextBox Name="txsdf" HorizontalAlignment="Stretch" Text="Enter Name" Grid.RowSpan="2" Height="150" FontSize="26"  Padding="10 15" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" Margin="15 0 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
+                <TextBox Name="ssdfdf" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"  Padding="10 15" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Margin="15 0 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
+                <TextBox Name="ssdfdsff" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"  Padding="10 15" Grid.Row="4" Grid.Column="2" VerticalAlignment="Center" Margin="15 0 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
 
 
 

@@ -55,6 +55,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="globel.cs" />
+    <Compile Include="PageDashBoard.xaml.cs">
+      <DependentUpon>PageDashBoard.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TopMenu.xaml.cs">
       <DependentUpon>TopMenu.xaml</DependentUpon>
     </Compile>
@@ -73,6 +76,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PageDashBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PageRegister.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

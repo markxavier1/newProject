@@ -19,3 +19,4 @@ c:\users\bob\documents\visual studio 2015\Projects\WpfApplication17\WpfApplicati
 c:\users\bob\documents\visual studio 2015\Projects\WpfApplication17\WpfApplication17\obj\Debug\WpfApplication17.pdb
 c:\users\bob\documents\visual studio 2015\Projects\WpfApplication17\WpfApplication17\obj\Debug\TopSub.g.cs
 c:\users\bob\documents\visual studio 2015\Projects\WpfApplication17\WpfApplication17\obj\Debug\TopSub.baml
+C:\Users\Bob\documents\visual studio 2015\Projects\WpfApplication17\WpfApplication17\obj\Debug\WpfApplication17.csprojResolveAssemblyReference.cache

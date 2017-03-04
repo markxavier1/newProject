@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Bob\documents\visual studio 2015\Projects\WpfApplication17\WpfApplication17\obj\Debug\
+C:\Users\Bob\Documents\Visual Studio 2015\Projects\WpfApplication17\WpfApplication17\obj\Debug\
 WpfApplication17
 none
 false
 DEBUG;TRACE
-C:\Users\Bob\documents\visual studio 2015\Projects\WpfApplication17\WpfApplication17\App.xaml
-4-984251134
+C:\Users\Bob\Documents\Visual Studio 2015\Projects\WpfApplication17\WpfApplication17\App.xaml
+7-2014685224
 
-9987883566
+12260962384
 13-1142990016
-MainWindow.xaml;PageRegister.xaml;TopMenu.xaml;TopSub.xaml;
+MainMenuUC.xaml;MainWindow.xaml;PageDashBoard.xaml;PageRegister.xaml;PageSettingType.xaml;TopMenu.xaml;TopSub.xaml;
 
 False
 

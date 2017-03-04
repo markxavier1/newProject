@@ -19,4 +19,9 @@ c:\users\bob\documents\visual studio 2015\Projects\WpfApplication17\WpfApplicati
 c:\users\bob\documents\visual studio 2015\Projects\WpfApplication17\WpfApplication17\obj\Debug\WpfApplication17.pdb
 c:\users\bob\documents\visual studio 2015\Projects\WpfApplication17\WpfApplication17\obj\Debug\TopSub.g.cs
 c:\users\bob\documents\visual studio 2015\Projects\WpfApplication17\WpfApplication17\obj\Debug\TopSub.baml
-C:\Users\Bob\documents\visual studio 2015\Projects\WpfApplication17\WpfApplication17\obj\Debug\WpfApplication17.csprojResolveAssemblyReference.cache
+C:\Users\Bob\Documents\Visual Studio 2015\Projects\WpfApplication17\WpfApplication17\obj\Debug\MainMenuUC.g.cs
+C:\Users\Bob\Documents\Visual Studio 2015\Projects\WpfApplication17\WpfApplication17\obj\Debug\PageDashBoard.g.cs
+C:\Users\Bob\Documents\Visual Studio 2015\Projects\WpfApplication17\WpfApplication17\obj\Debug\PageSettingType.g.cs
+C:\Users\Bob\Documents\Visual Studio 2015\Projects\WpfApplication17\WpfApplication17\obj\Debug\MainMenuUC.baml
+C:\Users\Bob\Documents\Visual Studio 2015\Projects\WpfApplication17\WpfApplication17\obj\Debug\PageDashBoard.baml
+C:\Users\Bob\Documents\Visual Studio 2015\Projects\WpfApplication17\WpfApplication17\obj\Debug\PageSettingType.baml

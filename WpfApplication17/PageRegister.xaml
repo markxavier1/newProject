@@ -16,45 +16,7 @@
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <local:TopSub x:Name="UCSub" Grid.Row="0"></local:TopSub>
-        <DockPanel Background="#cccccc" Grid.Row="1" >
-            <StackPanel Width="200" Margin="20 45 0 20" DockPanel.Dock="Left" HorizontalAlignment="Left" Background="#00879C">
-                <Button  x:Name="btnclose" HorizontalAlignment="Left" Width="60" Style="{StaticResource MyButton}" Height="60" Margin="10,0,10,0"  BorderBrush="Transparent"  >
-                    <Button.Background>
-                        <ImageBrush ImageSource="images/appbar.control.guide.png"/>
-                    </Button.Background>
-
-                </Button>
-                <TextBlock Text="asfkjkl" Foreground="#ffffff" Margin="15 0 0 0" FontSize="24"></TextBlock>
-            </StackPanel>
-            <StackPanel Width="200" Margin="20 45 0 20" DockPanel.Dock="Left" HorizontalAlignment="Left" Background="#404040">
-                <Button  x:Name="btnsdf" HorizontalAlignment="Left" Width="60" Style="{StaticResource MyButton}" Height="60" Margin="10,0,10,0"  BorderBrush="Transparent"  >
-                    <Button.Background>
-                        <ImageBrush ImageSource="images/appbar.control.guide.png"/>
-                    </Button.Background>
-
-                </Button>
-                <TextBlock Text="asfkjkl" Foreground="#ffffff" Margin="15 0 0 0" FontSize="24"></TextBlock>
-            </StackPanel>
-
-            <StackPanel Width="200" Margin="20 45 0 20" DockPanel.Dock="Left" HorizontalAlignment="Left" Background="#cc6d00">
-                <Button  x:Name="btnfdge" HorizontalAlignment="Left" Width="60" Style="{StaticResource MyButton}" Height="60" Margin="10,0,10,0"  BorderBrush="Transparent"  >
-                    <Button.Background>
-                        <ImageBrush ImageSource="images/appbar.control.guide.png"/>
-                    </Button.Background>
-
-                </Button>
-                <TextBlock Text="asfkjkl" Foreground="#ffffff" Margin="15 0 0 0" FontSize="24"></TextBlock>
-            </StackPanel>
-            <StackPanel Width="200" Margin="20 45 0 20" DockPanel.Dock="Left" HorizontalAlignment="Left" Background="#cc6dff">
-                <Button  x:Name="btndfg" HorizontalAlignment="Left" Width="60" Style="{StaticResource MyButton}" Height="60" Margin="10,0,10,0"  BorderBrush="Transparent"  >
-                    <Button.Background>
-                        <ImageBrush ImageSource="images/appbar.control.guide.png"/>
-                    </Button.Background>
-
-                </Button>
-                <TextBlock Text="asfkjkl" Foreground="#ffffff" Margin="15 0 0 0" FontSize="24"></TextBlock>
-            </StackPanel>
-        </DockPanel>
+        <local:MainMenuUC x:Name="MainMenu" Grid.Row="1"></local:MainMenuUC>
         <Grid  Grid.Row="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>

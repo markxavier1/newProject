@@ -55,8 +55,14 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="globel.cs" />
+    <Compile Include="MainMenuUC.xaml.cs">
+      <DependentUpon>MainMenuUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PageDashBoard.xaml.cs">
       <DependentUpon>PageDashBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSettingType.xaml.cs">
+      <DependentUpon>PageSettingType.xaml</DependentUpon>
     </Compile>
     <Compile Include="TopMenu.xaml.cs">
       <DependentUpon>TopMenu.xaml</DependentUpon>
@@ -64,6 +70,13 @@
     <Compile Include="TopSub.xaml.cs">
       <DependentUpon>TopSub.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserMainMenuUC.xaml.cs">
+      <DependentUpon>UserMainMenuUC.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainMenuUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -84,11 +97,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PageSettingType.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="TopMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TopSub.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserMainMenuUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

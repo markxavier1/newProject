@@ -4,26 +4,26 @@
     <EntitySetMapping Name="EmployeeTypeTbls">
       <EntityTypeMapping TypeName="testModel.EmployeeTypeTbl">
         <MappingFragment StoreEntitySet="EmployeeTypeTbl">
-          <ScalarProperty Name="RowId" ColumnName="RowId" />
-          <ScalarProperty Name="EmployeeTypeID" ColumnName="EmployeeTypeID" />
-          <ScalarProperty Name="EmployeeTypeName" ColumnName="EmployeeTypeName" />
-          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
-          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
           <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="EmployeeTypeName" ColumnName="EmployeeTypeName" />
+          <ScalarProperty Name="EmployeeTypeID" ColumnName="EmployeeTypeID" />
+          <ScalarProperty Name="RowId" ColumnName="RowId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="RTypeTbls">
       <EntityTypeMapping TypeName="testModel.RTypeTbl">
         <MappingFragment StoreEntitySet="RTypeTbl">
-          <ScalarProperty Name="RowId" ColumnName="RowId" />
-          <ScalarProperty Name="RTypeID" ColumnName="RTypeID" />
-          <ScalarProperty Name="RTypeName" ColumnName="RTypeName" />
-          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
-          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
           <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="RTypeName" ColumnName="RTypeName" />
+          <ScalarProperty Name="RTypeID" ColumnName="RTypeID" />
+          <ScalarProperty Name="RowId" ColumnName="RowId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

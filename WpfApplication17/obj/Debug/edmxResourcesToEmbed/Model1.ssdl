@@ -5,7 +5,7 @@
       <PropertyRef Name="RowId" />
     </Key>
     <Property Name="RowId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="EmployeeTypeID" Type="varchar" MaxLength="10" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="EmployeeTypeID" Type="varchar" MaxLength="15" StoreGeneratedPattern="Computed" />
     <Property Name="EmployeeTypeName" Type="nvarchar(max)" />
     <Property Name="CreateDate" Type="date" />
     <Property Name="CreateBy" Type="nvarchar(max)" />
@@ -14,7 +14,7 @@
   </EntityType>
   <EntityType Name="RTypeTbl">
     <Key>
-      <PropertyRef Name="RTypeID" />
+      <PropertyRef Name="RowId" />
     </Key>
     <Property Name="RowId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="RTypeID" Type="varchar" MaxLength="6" StoreGeneratedPattern="Computed" Nullable="false" />

@@ -78,28 +78,79 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
                     <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                 
+                    <ColumnDefinition Width="2*" />
                 </Grid.ColumnDefinitions>
-                <TextBox Name="txtCaseName" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"  Padding="10 15" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="15 00 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
-                <TextBox Name="txtName" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"  Padding="10 15" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Margin="15 00 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
-                <TextBox Name="txtas" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"  Padding="10 15" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" Margin="15 00 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
+                <TextBlock HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"   Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="15 00 15 0"  ></TextBlock>
+                <TextBox Name="txtFName" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"   Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Margin="15 00 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
+                <TextBlock HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"  Padding="10 15" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" Margin="15 00 15 0"  ></TextBlock>
+                <TextBox Name="txtLName" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"   Grid.Row="0" Grid.Column="3" VerticalAlignment="Center" Margin="15 00 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
 
-                <TextBox Name="txtdsf" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"  Padding="10 15" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="15 0 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
-                <TextBox Name="txtsdf" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"  Padding="10 15" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Margin="15 0 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
-                <TextBox Name="txtwerw" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"  Padding="10 15" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" Margin="15 0 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
+                <TextBlock HorizontalAlignment="Stretch" Text="Type" FontSize="26"   Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="15 0 15 0"  ></TextBlock>
+                <TextBox Name="txtType" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"   Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Margin="15 0 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
+                <TextBlock HorizontalAlignment="Stretch" Text="Mobile No" FontSize="26"  Padding="10 15" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" Margin="15 0 15 0"  ></TextBlock>
+                <TextBox Name="txtMobile" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"   Grid.Row="1" Grid.Column="3" VerticalAlignment="Center" Margin="15 00 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
 
+                <TextBlock HorizontalAlignment="Stretch" Text="Email" FontSize="26"   Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="15 0 15 0"  ></TextBlock>
+                <TextBox Name="txtEmail" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"   Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" Margin="15 0 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
+                <TextBlock HorizontalAlignment="Stretch" Text="Qualifcation" FontSize="26"  Padding="10 15" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" Margin="15 0 15 0"  ></TextBlock>
+                <TextBox Name="txtQuali" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"   Grid.Row="2" Grid.Column="3" VerticalAlignment="Center" Margin="15 00 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
 
-                <TextBox Name="txtdsdf" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"  Padding="10 15" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="15 0 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
-                <TextBox Name="txtsdfs" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"  Padding="10 15" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" Margin="15 0 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
-                <TextBox Name="txtwer" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"  Padding="10 15" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" Margin="15 0 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
+                <TextBlock HorizontalAlignment="Stretch" Text="Gender" FontSize="26"   Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" Margin="15 0 15 0"  ></TextBlock>
+                <ComboBox Name="cbGender" Grid.Column="1" Grid.Row="3" Margin="15 0 0 0" Height="60" VerticalAlignment="Center"   >
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <CheckBox IsChecked="{Binding IsSelected}" Width="20" VerticalAlignment="Center" />
+                                <TextBlock Text="{Binding ObjectData}" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                <TextBlock HorizontalAlignment="Stretch" Text="National Id" FontSize="26"  Padding="10 15" Grid.Row="3" Grid.Column="2" VerticalAlignment="Center" Margin="15 0 15 0"  ></TextBlock>
+                <TextBox Name="txtsdf" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"   Grid.Row="3" Grid.Column="3" VerticalAlignment="Center" Margin="15 00 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
 
+                <TextBlock HorizontalAlignment="Stretch" Text="Special" FontSize="26"   Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" Margin="15 0 15 0"  ></TextBlock>
+                <TextBox Name="txtSpl" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"   Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Margin="15 0 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
+                <TextBlock HorizontalAlignment="Stretch" Text="Salary" FontSize="26"  Padding="10 15" Grid.Row="4" Grid.Column="2" VerticalAlignment="Center" Margin="15 0 15 0"  ></TextBlock>
+                <TextBox Name="txtSalary" HorizontalAlignment="Stretch" Text="ds" FontSize="26"   Grid.Row="4" Grid.Column="3" VerticalAlignment="Center" Margin="15 00 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
 
-                <TextBox Name="txt54tdf" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26" TextWrapping="Wrap"  Padding="10 15" Grid.Row="3" Grid.Column="0"  VerticalAlignment="Center" Margin="15 0 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
+                <TextBlock HorizontalAlignment="Stretch" Text="Day" FontSize="26"   Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" Margin="15 0 15 0"  ></TextBlock>
+                <ComboBox Name="cbDay" Grid.Column="1" Grid.Row="5" Margin="15 0 0 0" Height="60" VerticalAlignment="Center"   >
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <CheckBox IsChecked="{Binding IsSelected}" Width="20" VerticalAlignment="Center" />
+                                <TextBlock Text="{Binding ObjectData}" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                <TextBlock HorizontalAlignment="Stretch" Text="Time" FontSize="26"  Padding="10 15" Grid.Row="5" Grid.Column="2" VerticalAlignment="Center" Margin="15 0 15 0"  ></TextBlock>
+                <ComboBox Name="cbTime" Grid.Column="3" Grid.Row="5" Margin="15 0 20 0" Height="60" VerticalAlignment="Center"   >
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <CheckBox IsChecked="{Binding IsSelected}" Width="20" VerticalAlignment="Center" />
+                                <TextBlock Text="{Binding ObjectData}" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+
+                <TextBlock HorizontalAlignment="Stretch" Text="Address" FontSize="26"   Grid.Row="6" Grid.Column="0" VerticalAlignment="Center" Margin="15 0 15 0"  ></TextBlock>
+                <TextBox HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26" TextWrapping="Wrap"   Padding="10 15" Grid.Row="6" Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Stretch" Margin="15 14 15 5" ></TextBox>
+                <TextBlock HorizontalAlignment="Stretch"  Text="zcdzsa" FontSize="26"  Padding="10 15" Grid.Row="6" Grid.Column="2" VerticalAlignment="Center" Margin="15 0 15 0"  ></TextBlock>
+                <TextBox Name="txtxcv" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"   Grid.Row="6" Grid.Column="3" VerticalAlignment="Center" Margin="15 00 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
+
+                <Button x:Name="BtnStartMatch" Grid.Row="7"  Grid.Column="2" Grid.ColumnSpan="2"  HorizontalAlignment="Right" VerticalAlignment="Top" Cursor="Hand" Margin="10,0,15,0"   Content="Save " Width="242" Style="{DynamicResource ButtonStyle2}" FontSize="20" FontWeight="SemiBold" Foreground="White"  Height="50"  />
+                <!--<TextBlock HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26" TextWrapping="Wrap"  Padding="10 15" Grid.Row="3" Grid.Column="0"  VerticalAlignment="Center" Margin="15 0 15 0" ></TextBlock>
                 <ComboBox Name="cbObjects" Grid.Column="1" Grid.Row="3" Margin="15 0 0 0" Height="60" VerticalAlignment="Center"   >
                     <ComboBox.ItemTemplate>
                         <DataTemplate>
@@ -130,7 +181,7 @@
 
 
 
-                <Button x:Name="BtnStartMatch" Grid.Row="5"  Grid.Column="2"  HorizontalAlignment="Center" VerticalAlignment="Top" Cursor="Hand" Margin="108,20,15,0"   Content="Save " Width="242" Style="{DynamicResource ButtonStyle2}" FontSize="20" FontWeight="SemiBold" Foreground="White"  Height="50"  />
+                <Button x:Name="BtnStartMatch" Grid.Row="5"  Grid.Column="2"  HorizontalAlignment="Center" VerticalAlignment="Top" Cursor="Hand" Margin="108,20,15,0"   Content="Save " Width="242" Style="{DynamicResource ButtonStyle2}" FontSize="20" FontWeight="SemiBold" Foreground="White"  Height="50"  />-->
             </Grid>
         </Grid>
         <DockPanel Background="#3f3f3f" Grid.Row="3">

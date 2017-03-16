@@ -26,7 +26,7 @@ namespace WpfApplication17
             Globel.mainwindow = this;
             InitializeComponent();
 
-            PageSettingType pagereg = new PageSettingType();
+            PageSettingRoType pagereg = new PageSettingRoType();
 
             FrameNavigate.Navigate(pagereg);
 

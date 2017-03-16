@@ -30,12 +30,15 @@ namespace WpfApplication17
 
         private void BtnStartMatch_Click(object sender, RoutedEventArgs e)
         {
-            EmployeeTypeTbl emp = new WpfApplication17.EmployeeTypeTbl();
-            emp.EmployeeTypeName = txtTypeName.Text;
-            //emp.UpdateBy = Globel.User;
-            //emp.UpdateDate = DateTime.Now;
-            db.EmployeeTypeTbls.Add(emp);
-            db.SaveChanges();
+            if (txtTypeName.Text != "Enter Type")
+            {
+                EmployeeTypeTbl emp = new WpfApplication17.EmployeeTypeTbl();
+                emp.EmployeeTypeName = txtTypeName.Text;
+                emp.UpdateBy = Globel.User;
+                emp.UpdateDate = DateTime.Now;
+                db.EmployeeTypeTbls.Add(emp);
+                db.SaveChanges();
+            }
 
         }
     }

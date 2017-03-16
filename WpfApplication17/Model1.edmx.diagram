@@ -6,7 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="4c72c2e3a21a481ba67009a8b24b7ee1" Name="Diagram1">
         <EntityTypeShape EntityType="testModel.EmployeeTypeTbl" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="testModel.RTypeTbl" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="testModel.RTypeTbl" Width="1.5" PointX="3.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

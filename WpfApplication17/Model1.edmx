@@ -19,7 +19,7 @@
         </EntityType>
         <EntityType Name="RTypeTbl">
           <Key>
-            <PropertyRef Name="RTypeID" />
+            <PropertyRef Name="RowId" />
           </Key>
           <Property Name="RowId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="RTypeID" Type="varchar" MaxLength="6" StoreGeneratedPattern="Computed" Nullable="false" />
@@ -55,7 +55,7 @@
         </EntityType>
         <EntityType Name="RTypeTbl">
           <Key>
-            <PropertyRef Name="RTypeID" />
+            <PropertyRef Name="RowId" />
           </Key>
           <Property Name="RowId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="RTypeID" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="false" annotation:StoreGeneratedPattern="Computed" />

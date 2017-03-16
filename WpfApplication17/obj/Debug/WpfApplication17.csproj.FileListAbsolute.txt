@@ -25,3 +25,13 @@ C:\Users\Bob\Documents\Visual Studio 2015\Projects\WpfApplication17\WpfApplicati
 C:\Users\Bob\Documents\Visual Studio 2015\Projects\WpfApplication17\WpfApplication17\obj\Debug\MainMenuUC.baml
 C:\Users\Bob\Documents\Visual Studio 2015\Projects\WpfApplication17\WpfApplication17\obj\Debug\PageDashBoard.baml
 C:\Users\Bob\Documents\Visual Studio 2015\Projects\WpfApplication17\WpfApplication17\obj\Debug\PageSettingType.baml
+C:\Users\Bob\Documents\Visual Studio 2015\Projects\WpfApplication17\WpfApplication17\bin\Debug\EntityFramework.dll
+C:\Users\Bob\Documents\Visual Studio 2015\Projects\WpfApplication17\WpfApplication17\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Bob\Documents\Visual Studio 2015\Projects\WpfApplication17\WpfApplication17\bin\Debug\EntityFramework.xml
+C:\Users\Bob\Documents\Visual Studio 2015\Projects\WpfApplication17\WpfApplication17\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Bob\Documents\Visual Studio 2015\Projects\WpfApplication17\WpfApplication17\obj\Debug\WpfApplication17.csprojResolveAssemblyReference.cache
+C:\Users\Bob\Documents\Visual Studio 2015\Projects\WpfApplication17\WpfApplication17\obj\Debug\PageSettingRoType.g.cs
+C:\Users\Bob\Documents\Visual Studio 2015\Projects\WpfApplication17\WpfApplication17\obj\Debug\UserMainMenuUC.g.cs
+C:\Users\Bob\Documents\Visual Studio 2015\Projects\WpfApplication17\WpfApplication17\obj\Debug\WpfApplication17_Content.g.cs
+C:\Users\Bob\Documents\Visual Studio 2015\Projects\WpfApplication17\WpfApplication17\obj\Debug\PageSettingRoType.baml
+C:\Users\Bob\Documents\Visual Studio 2015\Projects\WpfApplication17\WpfApplication17\obj\Debug\UserMainMenuUC.baml

@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Core;
+
 
 namespace WpfApplication17
 {
@@ -20,25 +22,37 @@ namespace WpfApplication17
     /// </summary>
     public partial class PageSettingRoType : Page
     {
-        testEntities db;
+
+
+        RTypeTbl rType;
+        SettingLayer setting;
         public PageSettingRoType()
         {
             InitializeComponent();
-             db = new WpfApplication17.testEntities();
+            rType = new RTypeTbl();
+            this.DataContext = rType;
+            setting = new SettingLayer();
         }
 
-        private void BtnStartMatch_Click(object sender, RoutedEventArgs e)
-        {
-            if (txtRTypeName.Text != "Enter Type")
-            {
-                RTypeTbl r = new WpfApplication17.RTypeTbl();
-                r.RTypeName = txtRTypeName.Text;
-                r.UpdateBy = Globel.User;
-                r.UpdateDate = DateTime.Now;
-                db.RTypeTbls.Add(r);
-                db.SaveChanges();
-            }
+      
 
+        private void BtnAddRType_Click(object sender, RoutedEventArgs e)
+        {
+            rType.CreateBy = Globel.User;
+            rType.CreateDate = DateTime.Now;
+            rType.UpdateBy = Globel.User;
+            rType.UpdateDate = DateTime.Now;
+            bool res = setting.AddRtype(rType);
+            if(res==true)
+            {
+                MessageBox.Show("Added");
+               
+            }
+           else
+            {
+                MessageBox.Show("error");
+
+            }
         }
     }
 }

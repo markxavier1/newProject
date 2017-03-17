@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="testModelStoreContainer" CdmEntityContainer="testEntities">
+    <EntitySetMapping Name="EmployeeTbls">
+      <EntityTypeMapping TypeName="testModel.EmployeeTbl">
+        <MappingFragment StoreEntitySet="EmployeeTbl">
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="RowId" ColumnName="RowId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Qual" ColumnName="Qual" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Nid" ColumnName="Nid" />
+          <ScalarProperty Name="Specl" ColumnName="Specl" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+          <ScalarProperty Name="Day" ColumnName="Day" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmployeeTypeTbls">
+      <EntityTypeMapping TypeName="testModel.EmployeeTypeTbl">
+        <MappingFragment StoreEntitySet="EmployeeTypeTbl">
+          <ScalarProperty Name="RowId" ColumnName="RowId" />
+          <ScalarProperty Name="EmployeeTypeID" ColumnName="EmployeeTypeID" />
+          <ScalarProperty Name="EmployeeTypeName" ColumnName="EmployeeTypeName" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RTypeTbls">
+      <EntityTypeMapping TypeName="testModel.RTypeTbl">
+        <MappingFragment StoreEntitySet="RTypeTbl">
+          <ScalarProperty Name="RowId" ColumnName="RowId" />
+          <ScalarProperty Name="RTypeID" ColumnName="RTypeID" />
+          <ScalarProperty Name="RTypeName" ColumnName="RTypeName" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -32,6 +32,7 @@ C:\Users\Bob\Documents\Visual Studio 2015\Projects\WpfApplication17\WpfApplicati
 C:\Users\Bob\Documents\Visual Studio 2015\Projects\WpfApplication17\WpfApplication17\obj\Debug\WpfApplication17.csprojResolveAssemblyReference.cache
 C:\Users\Bob\Documents\Visual Studio 2015\Projects\WpfApplication17\WpfApplication17\obj\Debug\PageSettingRoType.g.cs
 C:\Users\Bob\Documents\Visual Studio 2015\Projects\WpfApplication17\WpfApplication17\obj\Debug\UserMainMenuUC.g.cs
-C:\Users\Bob\Documents\Visual Studio 2015\Projects\WpfApplication17\WpfApplication17\obj\Debug\WpfApplication17_Content.g.cs
 C:\Users\Bob\Documents\Visual Studio 2015\Projects\WpfApplication17\WpfApplication17\obj\Debug\PageSettingRoType.baml
 C:\Users\Bob\Documents\Visual Studio 2015\Projects\WpfApplication17\WpfApplication17\obj\Debug\UserMainMenuUC.baml
+C:\Users\Bob\documents\visual studio 2015\Projects\WpfApplication17\WpfApplication17\bin\Debug\Core.dll
+C:\Users\Bob\documents\visual studio 2015\Projects\WpfApplication17\WpfApplication17\bin\Debug\Core.pdb

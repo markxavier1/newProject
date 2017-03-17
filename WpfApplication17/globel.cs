@@ -11,7 +11,7 @@ namespace WpfApplication17
 
         public static MainWindow mainwindow = null;
 
-        public static string User = "";
+        public static string User = "Admin";
 
     }
 }

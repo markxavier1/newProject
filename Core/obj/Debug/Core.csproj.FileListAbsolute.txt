@@ -1,0 +1,9 @@
+C:\Users\Bob\documents\visual studio 2015\Projects\WpfApplication17\Core\bin\Debug\Core.dll.config
+C:\Users\Bob\documents\visual studio 2015\Projects\WpfApplication17\Core\bin\Debug\Core.dll
+C:\Users\Bob\documents\visual studio 2015\Projects\WpfApplication17\Core\bin\Debug\Core.pdb
+C:\Users\Bob\documents\visual studio 2015\Projects\WpfApplication17\Core\bin\Debug\EntityFramework.dll
+C:\Users\Bob\documents\visual studio 2015\Projects\WpfApplication17\Core\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Bob\documents\visual studio 2015\Projects\WpfApplication17\Core\bin\Debug\EntityFramework.xml
+C:\Users\Bob\documents\visual studio 2015\Projects\WpfApplication17\Core\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Bob\documents\visual studio 2015\Projects\WpfApplication17\Core\obj\Debug\Core.dll
+C:\Users\Bob\documents\visual studio 2015\Projects\WpfApplication17\Core\obj\Debug\Core.pdb

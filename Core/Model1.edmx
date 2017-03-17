@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="testModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="EmployeeTbl">
+          <Key>
+            <PropertyRef Name="RowId" />
+          </Key>
+          <Property Name="RowId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID" Type="varchar" MaxLength="16" StoreGeneratedPattern="Computed" />
+          <Property Name="FirstName" Type="nvarchar(max)" />
+          <Property Name="LastName" Type="nvarchar(max)" />
+          <Property Name="Type" Type="nvarchar(max)" />
+          <Property Name="Mobile" Type="nvarchar(max)" />
+          <Property Name="Email" Type="nvarchar(max)" />
+          <Property Name="Qual" Type="nvarchar(max)" />
+          <Property Name="Gender" Type="nvarchar(max)" />
+          <Property Name="Nid" Type="nvarchar(max)" />
+          <Property Name="Specl" Type="nvarchar(max)" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="Salary" Type="nvarchar(max)" />
+          <Property Name="Day" Type="nvarchar(max)" />
+          <Property Name="Time" Type="nvarchar(max)" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="UpdateBy" Type="nchar" MaxLength="10" />
+          <Property Name="UpdateDate" Type="date" />
+        </EntityType>
+        <EntityType Name="EmployeeTypeTbl">
+          <Key>
+            <PropertyRef Name="RowId" />
+          </Key>
+          <Property Name="RowId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmployeeTypeID" Type="varchar" MaxLength="14" StoreGeneratedPattern="Computed" />
+          <Property Name="EmployeeTypeName" Type="nvarchar(max)" />
+          <Property Name="CreateDate" Type="date" />
+          <Property Name="CreateBy" Type="nvarchar(max)" />
+          <Property Name="UpdateBy" Type="nchar" MaxLength="10" />
+          <Property Name="UpdateDate" Type="date" />
+        </EntityType>
+        <EntityType Name="RTypeTbl">
+          <Key>
+            <PropertyRef Name="RowId" />
+          </Key>
+          <Property Name="RowId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RTypeID" Type="varchar" MaxLength="6" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="RTypeName" Type="nvarchar(max)" />
+          <Property Name="CreateDate" Type="date" />
+          <Property Name="CreateBy" Type="nvarchar(max)" />
+          <Property Name="UpdateBy" Type="nchar" MaxLength="10" />
+          <Property Name="UpdateDate" Type="date" />
+        </EntityType>
+        <EntityContainer Name="testModelStoreContainer">
+          <EntitySet Name="EmployeeTbl" EntityType="Self.EmployeeTbl" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EmployeeTypeTbl" EntityType="Self.EmployeeTypeTbl" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RTypeTbl" EntityType="Self.RTypeTbl" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="testModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="EmployeeTbl">
+          <Key>
+            <PropertyRef Name="RowId" />
+          </Key>
+          <Property Name="RowId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="String" MaxLength="16" FixedLength="false" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Qual" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Gender" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Nid" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Specl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Salary" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Day" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Time" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="UpdateBy" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="UpdateDate" Type="DateTime" Precision="0" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="EmployeeTypeTbl">
+          <Key>
+            <PropertyRef Name="RowId" />
+          </Key>
+          <Property Name="RowId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeTypeID" Type="String" MaxLength="14" FixedLength="false" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="EmployeeTypeName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreateDate" Type="DateTime" Precision="0" />
+          <Property Name="CreateBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UpdateBy" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="UpdateDate" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="RTypeTbl">
+          <Key>
+            <PropertyRef Name="RowId" />
+          </Key>
+          <Property Name="RowId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RTypeID" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="RTypeName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreateDate" Type="DateTime" Precision="0" />
+          <Property Name="CreateBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UpdateBy" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="UpdateDate" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityContainer Name="testEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="EmployeeTbls" EntityType="Self.EmployeeTbl" />
+          <EntitySet Name="EmployeeTypeTbls" EntityType="Self.EmployeeTypeTbl" />
+          <EntitySet Name="RTypeTbls" EntityType="Self.RTypeTbl" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="testModelStoreContainer" CdmEntityContainer="testEntities">
+          <EntitySetMapping Name="EmployeeTbls">
+            <EntityTypeMapping TypeName="testModel.EmployeeTbl">
+              <MappingFragment StoreEntitySet="EmployeeTbl">
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="RowId" ColumnName="RowId" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Qual" ColumnName="Qual" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Nid" ColumnName="Nid" />
+                <ScalarProperty Name="Specl" ColumnName="Specl" />
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+                <ScalarProperty Name="Day" ColumnName="Day" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmployeeTypeTbls">
+            <EntityTypeMapping TypeName="testModel.EmployeeTypeTbl">
+              <MappingFragment StoreEntitySet="EmployeeTypeTbl">
+                <ScalarProperty Name="RowId" ColumnName="RowId" />
+                <ScalarProperty Name="EmployeeTypeID" ColumnName="EmployeeTypeID" />
+                <ScalarProperty Name="EmployeeTypeName" ColumnName="EmployeeTypeName" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+                <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RTypeTbls">
+            <EntityTypeMapping TypeName="testModel.RTypeTbl">
+              <MappingFragment StoreEntitySet="RTypeTbl">
+                <ScalarProperty Name="RowId" ColumnName="RowId" />
+                <ScalarProperty Name="RTypeID" ColumnName="RTypeID" />
+                <ScalarProperty Name="RTypeName" ColumnName="RTypeName" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+                <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -82,16 +82,17 @@
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="2*" />
 
                     </Grid.ColumnDefinitions>
-                    <TextBox Name="txtRTypeName" HorizontalAlignment="Stretch" Text="Enter Type" FontSize="26"  Padding="20 15" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" Margin="125 00 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
+                    <TextBlock HorizontalAlignment="Stretch" Text="RType" FontSize="26"  Padding="20 15" Grid.Row="1" Grid.Column="0"  VerticalAlignment="Center"></TextBlock>
+                    <TextBox Name="txtRTypeName" HorizontalAlignment="Stretch" Text="{Binding RTypeName,Mode=TwoWay}" FontSize="26"  Padding="20 15" Grid.Row="1" Grid.Column="1"  VerticalAlignment="Center" Margin="25 00 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
 
 
 
 
-                    <Button x:Name="BtnAddRType" Grid.Row="2"  Grid.Column="1"  HorizontalAlignment="Center" VerticalAlignment="Top" Cursor="Hand" Margin="108,20,15,0"   Content="Save " Width="242" Style="{DynamicResource ButtonStyle2}" FontSize="20" FontWeight="SemiBold" Foreground="White"  Height="50" Click="BtnStartMatch_Click"  />
+                    <Button x:Name="BtnAddRType" Grid.Row="2"  Grid.Column="1"  HorizontalAlignment="Center" VerticalAlignment="Top" Cursor="Hand" Margin="108,20,15,0"   Content="Save " Width="242" Style="{DynamicResource ButtonStyle2}" FontSize="20" FontWeight="SemiBold" Foreground="White"  Height="50" Click="BtnAddRType_Click"  />
                 </Grid>
             </Grid>
             <DockPanel Background="#3f3f3f" Grid.Row="3">

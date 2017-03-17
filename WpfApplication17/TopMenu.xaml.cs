@@ -27,11 +27,13 @@ namespace WpfApplication17
 
         private void btnMin_Click(object sender, RoutedEventArgs e)
         {
+            Globel.mainwindow.WindowState = WindowState.Minimized;
 
         }
 
         private void btnclose_Click(object sender, RoutedEventArgs e)
         {
+            App.Current.Shutdown();
 
         }
     }

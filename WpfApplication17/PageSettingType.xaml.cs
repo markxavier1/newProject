@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Core;
 
 namespace WpfApplication17
 {
@@ -20,24 +21,34 @@ namespace WpfApplication17
     /// </summary>
     public partial class PageSettingType : Page
     {
-        testEntities db;
+         EmployeeTypeTbl eType;
+        SettingLayer setting;
         public PageSettingType()
         {
             InitializeComponent();
-            db = new WpfApplication17.testEntities();
+            eType = new EmployeeTypeTbl();
+            setting = new SettingLayer();
 
         }
 
-        private void BtnStartMatch_Click(object sender, RoutedEventArgs e)
+       
+
+        private void BtnAddType_Click(object sender, RoutedEventArgs e)
         {
-            if (txtTypeName.Text != "Enter Type")
+            eType.CreateBy = Globel.User;
+            eType.CreateDate = DateTime.Now;
+            eType.UpdateBy = Globel.User;
+            eType.UpdateDate = DateTime.Now;
+            bool res = setting.AddType(eType);
+            if (res == true)
             {
-                EmployeeTypeTbl emp = new WpfApplication17.EmployeeTypeTbl();
-                emp.EmployeeTypeName = txtTypeName.Text;
-                emp.UpdateBy = Globel.User;
-                emp.UpdateDate = DateTime.Now;
-                db.EmployeeTypeTbls.Add(emp);
-                db.SaveChanges();
+                MessageBox.Show("Added");
+
+            }
+            else
+            {
+                MessageBox.Show("error");
+
             }
 
         }

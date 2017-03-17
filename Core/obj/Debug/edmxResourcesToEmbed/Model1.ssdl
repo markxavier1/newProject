@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="testModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="EmployeeTbl">
+    <Key>
+      <PropertyRef Name="RowId" />
+    </Key>
+    <Property Name="RowId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID" Type="varchar" MaxLength="16" StoreGeneratedPattern="Computed" />
+    <Property Name="FirstName" Type="nvarchar(max)" />
+    <Property Name="LastName" Type="nvarchar(max)" />
+    <Property Name="Type" Type="nvarchar(max)" />
+    <Property Name="Mobile" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="Qual" Type="nvarchar(max)" />
+    <Property Name="Gender" Type="nvarchar(max)" />
+    <Property Name="Nid" Type="nvarchar(max)" />
+    <Property Name="Specl" Type="nvarchar(max)" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="Salary" Type="nvarchar(max)" />
+    <Property Name="Day" Type="nvarchar(max)" />
+    <Property Name="Time" Type="nvarchar(max)" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="UpdateBy" Type="nchar" MaxLength="10" />
+    <Property Name="UpdateDate" Type="date" />
+  </EntityType>
+  <EntityType Name="EmployeeTypeTbl">
+    <Key>
+      <PropertyRef Name="RowId" />
+    </Key>
+    <Property Name="RowId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeTypeID" Type="varchar" MaxLength="14" StoreGeneratedPattern="Computed" />
+    <Property Name="EmployeeTypeName" Type="nvarchar(max)" />
+    <Property Name="CreateDate" Type="date" />
+    <Property Name="CreateBy" Type="nvarchar(max)" />
+    <Property Name="UpdateBy" Type="nchar" MaxLength="10" />
+    <Property Name="UpdateDate" Type="date" />
+  </EntityType>
+  <EntityType Name="RTypeTbl">
+    <Key>
+      <PropertyRef Name="RowId" />
+    </Key>
+    <Property Name="RowId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RTypeID" Type="varchar" MaxLength="6" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="RTypeName" Type="nvarchar(max)" />
+    <Property Name="CreateDate" Type="date" />
+    <Property Name="CreateBy" Type="nvarchar(max)" />
+    <Property Name="UpdateBy" Type="nchar" MaxLength="10" />
+    <Property Name="UpdateDate" Type="date" />
+  </EntityType>
+  <EntityContainer Name="testModelStoreContainer">
+    <EntitySet Name="EmployeeTbl" EntityType="Self.EmployeeTbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmployeeTypeTbl" EntityType="Self.EmployeeTypeTbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RTypeTbl" EntityType="Self.RTypeTbl" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

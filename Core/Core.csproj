@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Days.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="EmployeeTbl.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -78,6 +79,7 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="SettingLayer.cs" />
+    <Compile Include="Times.cs" />
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="Model1.edmx">

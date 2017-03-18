@@ -24,6 +24,7 @@
           <Property Name="Salary" Type="nvarchar(max)" />
           <Property Name="Day" Type="nvarchar(max)" />
           <Property Name="Time" Type="nvarchar(max)" />
+          <Property Name="Image" Type="varbinary(max)" />
           <Property Name="IsActive" Type="bit" />
           <Property Name="UpdateBy" Type="nchar" MaxLength="10" />
           <Property Name="UpdateDate" Type="date" />
@@ -83,6 +84,7 @@
           <Property Name="UpdateBy" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="UpdateDate" Type="DateTime" Precision="0" />
           <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <EntityType Name="EmployeeTypeTbl">
           <Key>
@@ -122,6 +124,7 @@
           <EntitySetMapping Name="EmployeeTbls">
             <EntityTypeMapping TypeName="testModel.EmployeeTbl">
               <MappingFragment StoreEntitySet="EmployeeTbl">
+                <ScalarProperty Name="Image" ColumnName="Image" />
                 <ScalarProperty Name="Address" ColumnName="Address" />
                 <ScalarProperty Name="RowId" ColumnName="RowId" />
                 <ScalarProperty Name="ID" ColumnName="ID" />

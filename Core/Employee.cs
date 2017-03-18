@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,32 +15,16 @@ namespace Core
             db = new Core.testEntities();
 
         }
-        public bool AddEmployee(EmployeeTbl employee,List<Days> days, List<Times> times)
+        public bool AddEmployee(EmployeeTbl employee, List<Days> days, List<Times> times, byte[] ProfilePic, string User, bool IsActive = true)
         {
             if (employee != null)
             {
                 try
                 {
-
-
-                    string x = "";
-                    foreach (Days item in days)
-                    {
-                        if (item.IsSelected == true)
-                        {
-                            x = x + item.Day + ",";
-                        }
-                    }
-                    employee.Day = x;
-                    x = "";
-                    foreach (Times item in times)
-                    {
-                        if (item.IsSelected == true)
-                        {
-                            x = x + item.Time + ",";
-                        }
-                    }
-                    employee.Time = x;
+                    employee.IsActive = IsActive;
+                    employee.Day = workingDays(days);
+                    employee.Time = workingTimes(times);
+                    employee.Image = imageValidation(ProfilePic); //add PP.jpg at Bin Dir
                     db.EmployeeTbls.Add(employee);
                     db.SaveChanges();
                     return true;
@@ -53,6 +38,23 @@ namespace Core
             {
                 return false;
             }
+        }
+
+        private byte[] imageValidation(byte[] img) //No benfit 
+        {
+            try
+            {
+                string path = System.AppDomain.CurrentDomain.BaseDirectory;
+
+                if (img == null)
+                {
+                    img = File.ReadAllBytes(path + @"pp.jpg");
+                    return img;
+
+                }
+                return img;
+            }
+             catch { return null; }
         }
         public List<Days> ListOfDay()
         {
@@ -70,7 +72,7 @@ namespace Core
         public List<Times> ListOfTime()
         {
             List<Times> time = new List<Times>();
-            string[] t= new string[] { "10:00AM-11:00AM", "11:00AM-12:00PM", "12:00PM-01:00PM", "01:00PM-02:00PM", "02:00PM-03:00PM", "03:00PM-04:00PM", "04:00PM-05:00PM", "05:00PM-06:00PM", "06:00PM-07:00PM", "07:00PM-08:00PM", "08:00PM-09:00PM" };
+            string[] t = new string[] { "10:00AM-11:00AM", "11:00AM-12:00PM", "12:00PM-01:00PM", "01:00PM-02:00PM", "02:00PM-03:00PM", "03:00PM-04:00PM", "04:00PM-05:00PM", "05:00PM-06:00PM", "06:00PM-07:00PM", "07:00PM-08:00PM", "08:00PM-09:00PM" };
             for (int i = 0; i <= t.Length - 1; i++)
             {
                 time.Add(new Times(t[i]));
@@ -86,33 +88,38 @@ namespace Core
         }
         public List<string> ListOfType()
         {
-         return  db.EmployeeTypeTbls.Select(a=>a.EmployeeTypeName).ToList();
+            return db.EmployeeTypeTbls.Select(a => a.EmployeeTypeName).ToList();
 
         }
-
-    }
-
-    public class Days
-    {
-        public Days(string day)
+        private string workingDays(List<Days> days)
         {
-            Day = day;
-            IsSelected = false;
+            string d = "";
+            foreach (Days item in days)
+            {
+                if (item.IsSelected == true)
+                {
+                    d = d + item.Day + ",";
+                }
+            }
+            return d;
 
         }
-        public string Day { get; set; }
-        public bool IsSelected { get; set; }
-
-    }
-    public class Times
-    {
-        public Times(string time)
+        private string workingTimes(List<Times> times)
         {
-            Time = time;
-            IsSelected = false;
+            string d = "";
+            foreach (Times item in times)
+            {
+                if (item.IsSelected == true)
+                {
+                    d = d + item.Time + ",";
+                }
+            }
+            return d;
+
         }
-        public string Time { get; set; }
-        public bool IsSelected { get; set; }
 
     }
+
+
+    
 }

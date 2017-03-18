@@ -19,6 +19,7 @@
     <Property Name="Salary" Type="nvarchar(max)" />
     <Property Name="Day" Type="nvarchar(max)" />
     <Property Name="Time" Type="nvarchar(max)" />
+    <Property Name="Image" Type="varbinary(max)" />
     <Property Name="IsActive" Type="bit" />
     <Property Name="UpdateBy" Type="nchar" MaxLength="10" />
     <Property Name="UpdateDate" Type="date" />

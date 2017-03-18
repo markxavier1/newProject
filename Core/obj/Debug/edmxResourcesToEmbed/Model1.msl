@@ -4,6 +4,7 @@
     <EntitySetMapping Name="EmployeeTbls">
       <EntityTypeMapping TypeName="testModel.EmployeeTbl">
         <MappingFragment StoreEntitySet="EmployeeTbl">
+          <ScalarProperty Name="Image" ColumnName="Image" />
           <ScalarProperty Name="Address" ColumnName="Address" />
           <ScalarProperty Name="RowId" ColumnName="RowId" />
           <ScalarProperty Name="ID" ColumnName="ID" />

@@ -9,10 +9,12 @@ namespace Core
 {
     public class EmployeeLayer
     {
+
         testEntities db;
         public EmployeeLayer()
         {
             db = new Core.testEntities();
+
 
         }
         public bool AddEmployee(EmployeeTbl employee, List<Days> days, List<Times> times, byte[] ProfilePic, string User, bool IsActive = true)
@@ -39,7 +41,6 @@ namespace Core
                 return false;
             }
         }
-
         private byte[] imageValidation(byte[] img) //No benfit 
         {
             try
@@ -119,6 +120,7 @@ namespace Core
         }
 
     }
+
 
 
     

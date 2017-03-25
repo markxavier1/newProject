@@ -92,9 +92,9 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="2*" />
                 </Grid.ColumnDefinitions>
-                <TextBlock HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"   Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="15 00 15 0"  ></TextBlock>
+                <TextBlock HorizontalAlignment="Stretch" Text="First Name" FontSize="26"   Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="15 00 15 0"  ></TextBlock>
                 <TextBox Name="txtFName" HorizontalAlignment="Stretch" Text="{Binding FirstName,Mode=TwoWay}" FontSize="26"   Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Margin="15 00 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
-                <TextBlock HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"  Padding="10 15" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" Margin="15 00 15 0"  ></TextBlock>
+                <TextBlock HorizontalAlignment="Stretch" Text="Last Name" FontSize="26"  Padding="10 15" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" Margin="15 00 15 0"  ></TextBlock>
                 <TextBox Name="txtLName" HorizontalAlignment="Stretch" Text="{Binding LastName,Mode=TwoWay}" FontSize="26"   Grid.Row="0" Grid.Column="3" VerticalAlignment="Center" Margin="15 00 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
 
                 <TextBlock HorizontalAlignment="Stretch" Text="Type" FontSize="26"   Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="15 0 15 0"  ></TextBlock>
@@ -146,8 +146,8 @@
 
                 <TextBlock HorizontalAlignment="Stretch" Text="Address" FontSize="26"   Grid.Row="6" Grid.Column="0" VerticalAlignment="Center" Margin="15 0 15 0"  ></TextBlock>
                 <TextBox HorizontalAlignment="Stretch" Text="{Binding Address,Mode=TwoWay}" FontSize="18" TextWrapping="Wrap"   Padding="10 15" Grid.Row="6" Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Stretch" Margin="15 14 15 5" ></TextBox>
-                <!--<TextBlock HorizontalAlignment="Stretch"  Text="zcdzsa" FontSize="26"  Padding="10 15" Grid.Row="6" Grid.Column="2" VerticalAlignment="Center" Margin="15 0 15 0"  ></TextBlock>
-                <TextBox Name="txtxcv" HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26"   Grid.Row="6" Grid.Column="3" VerticalAlignment="Center" Margin="15 00 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>-->
+                <TextBlock HorizontalAlignment="Stretch"  Text="Fee" FontSize="26"  Padding="10 15" Grid.Row="6" Grid.Column="2" VerticalAlignment="Center" Margin="15 0 15 0"  ></TextBlock>
+                <TextBox  HorizontalAlignment="Stretch" Text="{Binding Fee,Mode=TwoWay}" FontSize="26"   Grid.Row="6" Grid.Column="3" VerticalAlignment="Center" Margin="15 00 15 0" Style="{DynamicResource TextBoxStyle1}" ></TextBox>
 
                 <Button x:Name="BtnSubmit" Grid.Row="7"  Grid.Column="2" Grid.ColumnSpan="2"  HorizontalAlignment="Right" VerticalAlignment="Top" Cursor="Hand" Margin="10,0,15,0"   Content="Save " Width="242" Style="{DynamicResource ButtonStyle2}" FontSize="20" FontWeight="SemiBold" Foreground="White"  Height="50" Click="BtnSubmit_Click"  />
                 <!--<TextBlock HorizontalAlignment="Stretch" Text="Enter Name" FontSize="26" TextWrapping="Wrap"  Padding="10 15" Grid.Row="3" Grid.Column="0"  VerticalAlignment="Center" Margin="15 0 15 0" ></TextBlock>

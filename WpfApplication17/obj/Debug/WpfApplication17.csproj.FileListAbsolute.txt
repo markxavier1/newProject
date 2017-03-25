@@ -36,3 +36,11 @@ C:\Users\Bob\Documents\Visual Studio 2015\Projects\WpfApplication17\WpfApplicati
 C:\Users\Bob\Documents\Visual Studio 2015\Projects\WpfApplication17\WpfApplication17\obj\Debug\UserMainMenuUC.baml
 C:\Users\Bob\documents\visual studio 2015\Projects\WpfApplication17\WpfApplication17\bin\Debug\Core.dll
 C:\Users\Bob\documents\visual studio 2015\Projects\WpfApplication17\WpfApplication17\bin\Debug\Core.pdb
+C:\Users\Bob\documents\visual studio 2015\Projects\WpfApplication17\WpfApplication17\obj\Debug\PageBedNew.g.cs
+C:\Users\Bob\documents\visual studio 2015\Projects\WpfApplication17\WpfApplication17\obj\Debug\PageDummy.g.cs
+C:\Users\Bob\documents\visual studio 2015\Projects\WpfApplication17\WpfApplication17\obj\Debug\PageRoNew.g.cs
+C:\Users\Bob\documents\visual studio 2015\Projects\WpfApplication17\WpfApplication17\obj\Debug\PageServiceNew.g.cs
+C:\Users\Bob\documents\visual studio 2015\Projects\WpfApplication17\WpfApplication17\obj\Debug\PageBedNew.baml
+C:\Users\Bob\documents\visual studio 2015\Projects\WpfApplication17\WpfApplication17\obj\Debug\PageDummy.baml
+C:\Users\Bob\documents\visual studio 2015\Projects\WpfApplication17\WpfApplication17\obj\Debug\PageRoNew.baml
+C:\Users\Bob\documents\visual studio 2015\Projects\WpfApplication17\WpfApplication17\obj\Debug\PageServiceNew.baml

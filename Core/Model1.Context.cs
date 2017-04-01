@@ -27,6 +27,6 @@ namespace Core
     
         public virtual DbSet<EmployeeTbl> EmployeeTbls { get; set; }
         public virtual DbSet<EmployeeTypeTbl> EmployeeTypeTbls { get; set; }
-        public virtual DbSet<RTypeTbl> RTypeTbls { get; set; }
+        public virtual DbSet<RoomTypeTbl> RoomTypeTbls { get; set; }
     }
 }

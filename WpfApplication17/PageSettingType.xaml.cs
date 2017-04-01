@@ -28,6 +28,7 @@ namespace WpfApplication17
             InitializeComponent();
             eType = new EmployeeTypeTbl();
             setting = new SettingLayer();
+            this.DataContext = eType;
 
         }
 
@@ -35,15 +36,12 @@ namespace WpfApplication17
 
         private void BtnAddType_Click(object sender, RoutedEventArgs e)
         {
-            eType.CreateBy = Globel.User;
-            eType.CreateDate = DateTime.Now;
-            eType.UpdateBy = Globel.User;
-            eType.UpdateDate = DateTime.Now;
-            bool res = setting.AddType(eType);
+           
+            bool res = setting.AddType(eType, Globel.User);
             if (res == true)
             {
                 MessageBox.Show("Added");
-
+               
             }
             else
             {

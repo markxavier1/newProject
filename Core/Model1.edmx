@@ -7,13 +7,14 @@
     <Schema Namespace="testModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="EmployeeTbl">
           <Key>
-            <PropertyRef Name="RowId" />
+            <PropertyRef Name="EmpID" />
           </Key>
           <Property Name="RowId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="ID" Type="varchar" MaxLength="16" StoreGeneratedPattern="Computed" />
+          <Property Name="EmpID" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="FirstName" Type="nvarchar(max)" />
           <Property Name="LastName" Type="nvarchar(max)" />
-          <Property Name="Type" Type="nvarchar(max)" />
+          <Property Name="Type" Type="nvarchar" MaxLength="20" />
+          <Property Name="TypeName" Type="nvarchar(max)" />
           <Property Name="Mobile" Type="nvarchar(max)" />
           <Property Name="Email" Type="nvarchar(max)" />
           <Property Name="Qual" Type="nvarchar(max)" />
@@ -21,100 +22,129 @@
           <Property Name="Nid" Type="nvarchar(max)" />
           <Property Name="Specl" Type="nvarchar(max)" />
           <Property Name="Address" Type="nvarchar(max)" />
-          <Property Name="Salary" Type="nvarchar(max)" />
+          <Property Name="Salary" Type="int" />
           <Property Name="Day" Type="nvarchar(max)" />
           <Property Name="Time" Type="nvarchar(max)" />
           <Property Name="Image" Type="varbinary(max)" />
+          <Property Name="Fee" Type="int" />
           <Property Name="IsActive" Type="bit" />
           <Property Name="UpdateBy" Type="nchar" MaxLength="10" />
           <Property Name="UpdateDate" Type="date" />
         </EntityType>
         <EntityType Name="EmployeeTypeTbl">
           <Key>
-            <PropertyRef Name="RowId" />
+            <PropertyRef Name="EmployeeTypeID" />
           </Key>
           <Property Name="RowId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="EmployeeTypeID" Type="varchar" MaxLength="14" StoreGeneratedPattern="Computed" />
+          <Property Name="EmployeeTypeID" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="EmployeeTypeName" Type="nvarchar(max)" />
-          <Property Name="CreateDate" Type="date" />
-          <Property Name="CreateBy" Type="nvarchar(max)" />
           <Property Name="UpdateBy" Type="nchar" MaxLength="10" />
           <Property Name="UpdateDate" Type="date" />
         </EntityType>
-        <EntityType Name="RTypeTbl">
+        <EntityType Name="RoomTypeTbl">
           <Key>
-            <PropertyRef Name="RowId" />
+            <PropertyRef Name="RoomTypeID" />
           </Key>
           <Property Name="RowId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="RTypeID" Type="varchar" MaxLength="6" StoreGeneratedPattern="Computed" Nullable="false" />
-          <Property Name="RTypeName" Type="nvarchar(max)" />
-          <Property Name="CreateDate" Type="date" />
-          <Property Name="CreateBy" Type="nvarchar(max)" />
-          <Property Name="UpdateBy" Type="nchar" MaxLength="10" />
+          <Property Name="RoomTypeID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="RoomTypeName" Type="nvarchar(max)" />
+          <Property Name="UpdateBy" Type="nvarchar(max)" />
           <Property Name="UpdateDate" Type="date" />
         </EntityType>
+        <Association Name="FK__EmployeeTb__Type__33D4B598">
+          <End Role="EmployeeTypeTbl" Type="Self.EmployeeTypeTbl" Multiplicity="0..1" />
+          <End Role="EmployeeTbl" Type="Self.EmployeeTbl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployeeTypeTbl">
+              <PropertyRef Name="EmployeeTypeID" />
+            </Principal>
+            <Dependent Role="EmployeeTbl">
+              <PropertyRef Name="Type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="testModelStoreContainer">
           <EntitySet Name="EmployeeTbl" EntityType="Self.EmployeeTbl" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="EmployeeTypeTbl" EntityType="Self.EmployeeTypeTbl" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="RTypeTbl" EntityType="Self.RTypeTbl" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RoomTypeTbl" EntityType="Self.RoomTypeTbl" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__EmployeeTb__Type__33D4B598" Association="Self.FK__EmployeeTb__Type__33D4B598">
+            <End Role="EmployeeTypeTbl" EntitySet="EmployeeTypeTbl" />
+            <End Role="EmployeeTbl" EntitySet="EmployeeTbl" />
+          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="testModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="testEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="EmployeeTbls" EntityType="testModel.EmployeeTbl" />
+          <EntitySet Name="EmployeeTypeTbls" EntityType="testModel.EmployeeTypeTbl" />
+          <EntitySet Name="RoomTypeTbls" EntityType="testModel.RoomTypeTbl" />
+          <AssociationSet Name="FK__EmployeeTb__Type__33D4B598" Association="testModel.FK__EmployeeTb__Type__33D4B598">
+            <End Role="EmployeeTypeTbl" EntitySet="EmployeeTypeTbls" />
+            <End Role="EmployeeTbl" EntitySet="EmployeeTbls" />
+          </AssociationSet>
+        </EntityContainer>
         <EntityType Name="EmployeeTbl">
           <Key>
-            <PropertyRef Name="RowId" />
+            <PropertyRef Name="EmpID" />
           </Key>
           <Property Name="RowId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ID" Type="String" MaxLength="16" FixedLength="false" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="EmpID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="TypeName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Mobile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Qual" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Gender" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Nid" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Specl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Salary" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Salary" Type="Int32" />
           <Property Name="Day" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Time" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Fee" Type="Int32" />
           <Property Name="IsActive" Type="Boolean" />
           <Property Name="UpdateBy" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="UpdateDate" Type="DateTime" Precision="0" />
-          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="EmployeeTypeTbl" Relationship="testModel.FK__EmployeeTb__Type__33D4B598" FromRole="EmployeeTbl" ToRole="EmployeeTypeTbl" />
         </EntityType>
         <EntityType Name="EmployeeTypeTbl">
           <Key>
-            <PropertyRef Name="RowId" />
+            <PropertyRef Name="EmployeeTypeID" />
           </Key>
           <Property Name="RowId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="EmployeeTypeID" Type="String" MaxLength="14" FixedLength="false" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="EmployeeTypeID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="EmployeeTypeName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="CreateDate" Type="DateTime" Precision="0" />
-          <Property Name="CreateBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="UpdateBy" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="UpdateDate" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="EmployeeTbls" Relationship="testModel.FK__EmployeeTb__Type__33D4B598" FromRole="EmployeeTypeTbl" ToRole="EmployeeTbl" />
         </EntityType>
-        <EntityType Name="RTypeTbl">
+        <EntityType Name="RoomTypeTbl">
           <Key>
-            <PropertyRef Name="RowId" />
+            <PropertyRef Name="RoomTypeID" />
           </Key>
           <Property Name="RowId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="RTypeID" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
-          <Property Name="RTypeName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="CreateDate" Type="DateTime" Precision="0" />
-          <Property Name="CreateBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="UpdateBy" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="RoomTypeID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="RoomTypeName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UpdateBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="UpdateDate" Type="DateTime" Precision="0" />
         </EntityType>
-        <EntityContainer Name="testEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="EmployeeTbls" EntityType="Self.EmployeeTbl" />
-          <EntitySet Name="EmployeeTypeTbls" EntityType="Self.EmployeeTypeTbl" />
-          <EntitySet Name="RTypeTbls" EntityType="Self.RTypeTbl" />
-        </EntityContainer>
+        <Association Name="FK__EmployeeTb__Type__33D4B598">
+          <End Type="testModel.EmployeeTypeTbl" Role="EmployeeTypeTbl" Multiplicity="0..1" />
+          <End Type="testModel.EmployeeTbl" Role="EmployeeTbl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployeeTypeTbl">
+              <PropertyRef Name="EmployeeTypeID" />
+            </Principal>
+            <Dependent Role="EmployeeTbl">
+              <PropertyRef Name="Type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -124,51 +154,49 @@
           <EntitySetMapping Name="EmployeeTbls">
             <EntityTypeMapping TypeName="testModel.EmployeeTbl">
               <MappingFragment StoreEntitySet="EmployeeTbl">
-                <ScalarProperty Name="Image" ColumnName="Image" />
-                <ScalarProperty Name="Address" ColumnName="Address" />
-                <ScalarProperty Name="RowId" ColumnName="RowId" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-                <ScalarProperty Name="LastName" ColumnName="LastName" />
-                <ScalarProperty Name="Type" ColumnName="Type" />
-                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="Qual" ColumnName="Qual" />
-                <ScalarProperty Name="Gender" ColumnName="Gender" />
-                <ScalarProperty Name="Nid" ColumnName="Nid" />
-                <ScalarProperty Name="Specl" ColumnName="Specl" />
-                <ScalarProperty Name="Salary" ColumnName="Salary" />
-                <ScalarProperty Name="Day" ColumnName="Day" />
-                <ScalarProperty Name="Time" ColumnName="Time" />
-                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
-                <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
                 <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+                <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Fee" ColumnName="Fee" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="Day" ColumnName="Day" />
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Specl" ColumnName="Specl" />
+                <ScalarProperty Name="Nid" ColumnName="Nid" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Qual" ColumnName="Qual" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="EmpID" ColumnName="EmpID" />
+                <ScalarProperty Name="RowId" ColumnName="RowId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="EmployeeTypeTbls">
             <EntityTypeMapping TypeName="testModel.EmployeeTypeTbl">
               <MappingFragment StoreEntitySet="EmployeeTypeTbl">
-                <ScalarProperty Name="RowId" ColumnName="RowId" />
-                <ScalarProperty Name="EmployeeTypeID" ColumnName="EmployeeTypeID" />
-                <ScalarProperty Name="EmployeeTypeName" ColumnName="EmployeeTypeName" />
-                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-                <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
-                <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
                 <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+                <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+                <ScalarProperty Name="EmployeeTypeName" ColumnName="EmployeeTypeName" />
+                <ScalarProperty Name="EmployeeTypeID" ColumnName="EmployeeTypeID" />
+                <ScalarProperty Name="RowId" ColumnName="RowId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="RTypeTbls">
-            <EntityTypeMapping TypeName="testModel.RTypeTbl">
-              <MappingFragment StoreEntitySet="RTypeTbl">
-                <ScalarProperty Name="RowId" ColumnName="RowId" />
-                <ScalarProperty Name="RTypeID" ColumnName="RTypeID" />
-                <ScalarProperty Name="RTypeName" ColumnName="RTypeName" />
-                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-                <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
-                <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <EntitySetMapping Name="RoomTypeTbls">
+            <EntityTypeMapping TypeName="testModel.RoomTypeTbl">
+              <MappingFragment StoreEntitySet="RoomTypeTbl">
                 <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+                <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+                <ScalarProperty Name="RoomTypeName" ColumnName="RoomTypeName" />
+                <ScalarProperty Name="RoomTypeID" ColumnName="RoomTypeID" />
+                <ScalarProperty Name="RowId" ColumnName="RowId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

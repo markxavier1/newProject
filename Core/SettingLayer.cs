@@ -14,14 +14,17 @@ namespace Core
             db = new Core.testEntities();
 
         }
-        public bool AddRtype(RTypeTbl rt)
+        public bool AddRtype(RoomTypeTbl rt, string User)
         {
             if (rt != null)
             {
                 try
                 {
-
-                    db.RTypeTbls.Add(rt);
+                    int max = db.RoomTypeTbls.Max(r => r.RowId);
+                    rt.RoomTypeID = GetID(max, "Room");
+                    rt.UpdateBy = User;
+                    rt.UpdateDate = DateTime.Now;
+                    db.RoomTypeTbls.Add(rt);
                     db.SaveChanges();
                     return true;
                 }
@@ -34,13 +37,16 @@ namespace Core
 
         }
 
-        public bool AddType(EmployeeTypeTbl et)
+        public bool AddType(EmployeeTypeTbl et, string User)
         {
             if (et != null)
             {
                 try
                 {
-
+                    int max = db.EmployeeTypeTbls.Select(e=>e.RowId).DefaultIfEmpty(0).Max();
+                    et.EmployeeTypeID = GetID(max, "St");
+                    et.UpdateBy = User;
+                    et.UpdateDate = DateTime.Now;
                     db.EmployeeTypeTbls.Add(et);
                     db.SaveChanges();
                     return true;
@@ -65,6 +71,15 @@ namespace Core
             List<string> day = new List<string>(new string[] { "10:00AM-11:00AM", "11:00AM-12:00PM", "12:00PM-01:00PM", "01:00PM-02:00PM", "02:00PM-03:00PM", "03:00PM-04:00PM", "04:00PM-05:00PM", "05:00PM-06:00PM", "06:00PM-07:00PM", "07:00PM-08:00PM", "08:00PM-09:00PM" });
             return day;
 
+        }
+
+        private string GetID(int? Max, string Type)
+        {
+            if (Max == null)
+            {
+                Max = -001;
+            }
+            return Type + DateTime.Now.Year.ToString() + (Max + 1).ToString();
         }
     }
 }

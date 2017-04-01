@@ -2,13 +2,14 @@
 <Schema Namespace="testModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="EmployeeTbl">
     <Key>
-      <PropertyRef Name="RowId" />
+      <PropertyRef Name="EmpID" />
     </Key>
     <Property Name="RowId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="ID" Type="varchar" MaxLength="16" StoreGeneratedPattern="Computed" />
+    <Property Name="EmpID" Type="nvarchar" MaxLength="20" Nullable="false" />
     <Property Name="FirstName" Type="nvarchar(max)" />
     <Property Name="LastName" Type="nvarchar(max)" />
-    <Property Name="Type" Type="nvarchar(max)" />
+    <Property Name="Type" Type="nvarchar" MaxLength="20" />
+    <Property Name="TypeName" Type="nvarchar(max)" />
     <Property Name="Mobile" Type="nvarchar(max)" />
     <Property Name="Email" Type="nvarchar(max)" />
     <Property Name="Qual" Type="nvarchar(max)" />
@@ -16,41 +17,54 @@
     <Property Name="Nid" Type="nvarchar(max)" />
     <Property Name="Specl" Type="nvarchar(max)" />
     <Property Name="Address" Type="nvarchar(max)" />
-    <Property Name="Salary" Type="nvarchar(max)" />
+    <Property Name="Salary" Type="int" />
     <Property Name="Day" Type="nvarchar(max)" />
     <Property Name="Time" Type="nvarchar(max)" />
     <Property Name="Image" Type="varbinary(max)" />
+    <Property Name="Fee" Type="int" />
     <Property Name="IsActive" Type="bit" />
     <Property Name="UpdateBy" Type="nchar" MaxLength="10" />
     <Property Name="UpdateDate" Type="date" />
   </EntityType>
   <EntityType Name="EmployeeTypeTbl">
     <Key>
-      <PropertyRef Name="RowId" />
+      <PropertyRef Name="EmployeeTypeID" />
     </Key>
     <Property Name="RowId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="EmployeeTypeID" Type="varchar" MaxLength="14" StoreGeneratedPattern="Computed" />
+    <Property Name="EmployeeTypeID" Type="nvarchar" MaxLength="20" Nullable="false" />
     <Property Name="EmployeeTypeName" Type="nvarchar(max)" />
-    <Property Name="CreateDate" Type="date" />
-    <Property Name="CreateBy" Type="nvarchar(max)" />
     <Property Name="UpdateBy" Type="nchar" MaxLength="10" />
     <Property Name="UpdateDate" Type="date" />
   </EntityType>
-  <EntityType Name="RTypeTbl">
+  <EntityType Name="RoomTypeTbl">
     <Key>
-      <PropertyRef Name="RowId" />
+      <PropertyRef Name="RoomTypeID" />
     </Key>
     <Property Name="RowId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="RTypeID" Type="varchar" MaxLength="6" StoreGeneratedPattern="Computed" Nullable="false" />
-    <Property Name="RTypeName" Type="nvarchar(max)" />
-    <Property Name="CreateDate" Type="date" />
-    <Property Name="CreateBy" Type="nvarchar(max)" />
-    <Property Name="UpdateBy" Type="nchar" MaxLength="10" />
+    <Property Name="RoomTypeID" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="RoomTypeName" Type="nvarchar(max)" />
+    <Property Name="UpdateBy" Type="nvarchar(max)" />
     <Property Name="UpdateDate" Type="date" />
   </EntityType>
+  <Association Name="FK__EmployeeTb__Type__33D4B598">
+    <End Role="EmployeeTypeTbl" Type="Self.EmployeeTypeTbl" Multiplicity="0..1" />
+    <End Role="EmployeeTbl" Type="Self.EmployeeTbl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeTypeTbl">
+        <PropertyRef Name="EmployeeTypeID" />
+      </Principal>
+      <Dependent Role="EmployeeTbl">
+        <PropertyRef Name="Type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="testModelStoreContainer">
     <EntitySet Name="EmployeeTbl" EntityType="Self.EmployeeTbl" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="EmployeeTypeTbl" EntityType="Self.EmployeeTypeTbl" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="RTypeTbl" EntityType="Self.RTypeTbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RoomTypeTbl" EntityType="Self.RoomTypeTbl" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__EmployeeTb__Type__33D4B598" Association="Self.FK__EmployeeTb__Type__33D4B598">
+      <End Role="EmployeeTypeTbl" EntitySet="EmployeeTypeTbl" />
+      <End Role="EmployeeTbl" EntitySet="EmployeeTbl" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>

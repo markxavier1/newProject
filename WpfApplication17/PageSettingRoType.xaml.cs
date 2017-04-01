@@ -24,12 +24,12 @@ namespace WpfApplication17
     {
 
 
-        RTypeTbl rType;
+        RoomTypeTbl rType;
         SettingLayer setting;
         public PageSettingRoType()
         {
             InitializeComponent();
-            rType = new RTypeTbl();
+            rType = new RoomTypeTbl();
             this.DataContext = rType;
             setting = new SettingLayer();
         }
@@ -38,11 +38,9 @@ namespace WpfApplication17
 
         private void BtnAddRType_Click(object sender, RoutedEventArgs e)
         {
-            rType.CreateBy = Globel.User;
-            rType.CreateDate = DateTime.Now;
-            rType.UpdateBy = Globel.User;
-            rType.UpdateDate = DateTime.Now;
-            bool res = setting.AddRtype(rType);
+           
+          
+            bool res = setting.AddRtype(rType, Globel.User);
             if(res==true)
             {
                 MessageBox.Show("Added");

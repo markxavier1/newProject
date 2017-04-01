@@ -15,23 +15,27 @@ namespace Core
     public partial class EmployeeTbl
     {
         public int RowId { get; set; }
-        public string ID { get; set; }
+        public string EmpID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Type { get; set; }
+        public string TypeName { get; set; }
         public string Mobile { get; set; }
         public string Email { get; set; }
         public string Qual { get; set; }
         public string Gender { get; set; }
         public string Nid { get; set; }
         public string Specl { get; set; }
-        public string Salary { get; set; }
+        public string Address { get; set; }
+        public Nullable<int> Salary { get; set; }
         public string Day { get; set; }
         public string Time { get; set; }
+        public byte[] Image { get; set; }
+        public Nullable<int> Fee { get; set; }
         public Nullable<bool> IsActive { get; set; }
         public string UpdateBy { get; set; }
         public Nullable<System.DateTime> UpdateDate { get; set; }
-        public string Address { get; set; }
-        public byte[] Image { get; set; }
+    
+        public virtual EmployeeTypeTbl EmployeeTypeTbl { get; set; }
     }
 }

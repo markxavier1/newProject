@@ -14,12 +14,19 @@ namespace Core
     
     public partial class EmployeeTypeTbl
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public EmployeeTypeTbl()
+        {
+            this.EmployeeTbls = new HashSet<EmployeeTbl>();
+        }
+    
         public int RowId { get; set; }
         public string EmployeeTypeID { get; set; }
         public string EmployeeTypeName { get; set; }
-        public Nullable<System.DateTime> CreateDate { get; set; }
-        public string CreateBy { get; set; }
         public string UpdateBy { get; set; }
         public Nullable<System.DateTime> UpdateDate { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<EmployeeTbl> EmployeeTbls { get; set; }
     }
 }
